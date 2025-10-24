@@ -1,5 +1,5 @@
 # Stage 1: Build the Application
-FROM eclipse-temurin:21-jdk-jammy AS build
+FROM maven:3.9.6-eclipse-temurin-21 AS build
 # Define the API Key as a build argument (used only during the build stage)
 ARG API_KEY
 # Set the current working directory inside the container
