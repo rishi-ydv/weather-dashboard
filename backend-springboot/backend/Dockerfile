@@ -1,5 +1,5 @@
 # Stage 1: Build the Application
-FROM maven:3.8.7-eclipse-temurin-17 AS build
+FROM maven:3.9.6-eclipse-temurin-21 AS build
 # Set the current working directory inside the container
 WORKDIR /app
 # Copy the Maven project files (pom.xml)
@@ -11,7 +11,7 @@ COPY src /app/src
 RUN mvn clean package -DskipTests
 
 # Stage 2: Create the Final Production Image
-FROM eclipse-temurin:17-jre-focal
+FROM eclipse-temurin:21-jre-focal
 # Set the working directory for the final application
 WORKDIR /app
 
