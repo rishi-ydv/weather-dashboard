@@ -392,7 +392,7 @@ const WeatherIcon = ({ condition, isNight, className, ...props }) => {
 };
 
 // --- API Service Functions (Internal) ---
-const BASE_URL = "http://localhost:8080/api/weather";
+const BASE_URL = "https://weather-dashboard-api-zymw.onrender.com/api/weather";
 const API_DATE_FORMAT = new Date().toISOString().split("T")[0]; // "YYYY-MM-DD"
 
 /**
